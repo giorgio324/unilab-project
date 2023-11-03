@@ -4,8 +4,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import Form from "./pages/Form";
+import Home from "./pages/home/Home";
+import Form from "./pages/form/Form";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
