@@ -33,19 +33,7 @@
   align-items: center;
   font-family: var(--secondary-font);
 }
-.form-add-image {
-  width: 200px;
-  height: 200px;
-  background-color: var(--primary-gray);
-  border-radius: 50%;
-  border: transparent;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 45px;
-  margin-bottom: 65px;
-}
+
 .form-name-label {
   font-size: 36px;
   font-weight: 400;

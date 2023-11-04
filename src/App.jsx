@@ -4,6 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { GlobalContextProvider } from "./context/GlobalContext";
 import Home from "./pages/home/Home";
 import Form from "./pages/form/Form";
 const router = createBrowserRouter(
@@ -15,7 +16,11 @@ const router = createBrowserRouter(
   )
 );
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <GlobalContextProvider>
+      <RouterProvider router={router} />
+    </GlobalContextProvider>
+  );
 };
 
 export default App;

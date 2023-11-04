@@ -1,5 +1,5 @@
-import cameraIcon from "../../assets/images/cameraIcon.svg";
 import styles from "./Form.module.css";
+import FormImageInput from "../../components/formImageInput/FormImageInput";
 const Form = () => {
   return (
     <main className={styles["form-bg"]}>
@@ -7,15 +7,7 @@ const Form = () => {
         <h2>Get Started</h2>
         <p>add a photo</p>
         <form className={styles["form-container"]}>
-          <label htmlFor="image" className={styles["form-add-image"]}>
-            <img src={cameraIcon} alt="add image Icon" />
-          </label>
-          <input
-            type="file"
-            name="image"
-            id="image"
-            style={{ display: "none" }}
-          />
+          <FormImageInput />
           <label htmlFor="name" className={styles["form-name-label"]}>
             fill in your name
           </label>
