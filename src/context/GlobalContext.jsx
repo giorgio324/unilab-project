@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from "react";
-
+import { createContext, useContext, useState, useEffect } from "react";
+import { getItemFromLocalStorage } from "../utils/localstorage";
 const GlobalContext = createContext();
 export const useGlobalContext = () => {
   return useContext(GlobalContext);
@@ -10,6 +10,16 @@ export const GlobalContextProvider = ({ children }) => {
     image: "",
   };
   const [userData, setUserData] = useState(initialState);
+
+  // when the page loads get items from localstorage otherwise set it to initialstae
+  useEffect(() => {
+    const localStorageValue = getItemFromLocalStorage();
+    if (localStorageValue) {
+      setUserData(localStorageValue);
+    } else {
+      setUserData(initialState);
+    }
+  }, []);
   return (
     <GlobalContext.Provider value={{ userData, setUserData }}>
       {children}

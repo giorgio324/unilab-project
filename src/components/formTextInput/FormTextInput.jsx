@@ -19,6 +19,7 @@ const FormTextInput = () => {
         type="text"
         name="name"
         id="name"
+        value={userData.name}
         className={styles["form-name-input"]}
         placeholder="your name"
         onChange={handleName}

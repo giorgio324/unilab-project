@@ -33,8 +33,3 @@
   align-items: center;
   font-family: var(--secondary-font);
 }
-
-.form-container button {
-  border-radius: 50px;
-  padding: 20px 130px;
-}
