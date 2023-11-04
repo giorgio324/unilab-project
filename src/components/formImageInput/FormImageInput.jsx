@@ -10,10 +10,10 @@ const FormImageInput = () => {
       const reader = new FileReader();
       reader.onload = (e) => {
         const dataURL = e.target.result;
-        setUserData((prevUserData) => ({
-          ...prevUserData,
+        setUserData({
+          ...userData,
           image: dataURL,
-        }));
+        });
       };
       reader.readAsDataURL(file);
     }

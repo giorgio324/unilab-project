@@ -1,0 +1,13 @@
+.form-name-label {
+  font-size: 36px;
+  font-weight: 400;
+}
+.form-name-input {
+  padding: 30px 20px;
+  margin: 40px 0;
+  background-color: var(--primary-gray);
+  font-size: 36px;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  border: transparent;
+}
