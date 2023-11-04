@@ -4,10 +4,9 @@ const FormTextInput = () => {
   const { userData, setUserData } = useGlobalContext();
   const handleName = (e) => {
     const { value, name } = e.target;
-    console.log(value, name);
     setUserData({
       ...userData,
-      name: value,
+      [name]: value,
     });
   };
   return (

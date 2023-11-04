@@ -3,7 +3,6 @@ import styles from "./FormImageInput.module.css";
 import { useGlobalContext } from "../../context/GlobalContext";
 const FormImageInput = () => {
   const { userData, setUserData } = useGlobalContext();
-  console.log(userData);
   const handleImage = (e) => {
     const file = e.target.files[0];
     if (file) {

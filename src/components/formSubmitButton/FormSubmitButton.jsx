@@ -6,7 +6,6 @@ const FormSubmitButton = () => {
   const handleClick = (e) => {
     e.preventDefault();
     if (userData.name && userData.image) {
-      console.log("validated");
       saveToLocalStorage(userData);
     }
   };
