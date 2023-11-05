@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { useGlobalContext } from "../../context/GlobalContext";
-const Navbar = ({ handleToggle }) => {
-  const { userData } = useGlobalContext();
+const Navbar = ({ handleToggle, userData }) => {
   return (
     <nav>
       <div className={styles.left}>

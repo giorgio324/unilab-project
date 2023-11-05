@@ -6,3 +6,6 @@ export const getItemFromLocalStorage = () => {
   const user = result ? JSON.parse(result) : null;
   return user;
 };
+export const deleteItemFromLocalStorage = () => {
+  localStorage.removeItem("user");
+};
