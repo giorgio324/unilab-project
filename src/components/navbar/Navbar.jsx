@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useGlobalContext } from "../../context/GlobalContext";
-const Navbar = () => {
+const Navbar = ({ handleToggle }) => {
   const { userData } = useGlobalContext();
   return (
     <nav>
@@ -14,6 +14,7 @@ const Navbar = () => {
         <img
           src={userData?.image}
           alt={`${userData?.name}'s profile picture`}
+          onClick={handleToggle}
         />
       </div>
     </nav>

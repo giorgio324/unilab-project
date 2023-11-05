@@ -1,0 +1,33 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 85, 85, 0.5); /* semi-transparent black */
+  z-index: 999; /* ensure the overlay is above other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialog-container {
+  display: flex;
+  position: relative;
+  background-color: white;
+  padding: 150px 225px;
+  border-radius: 20px;
+}
+.close {
+  position: absolute;
+  border: transparent;
+  font-size: 36px;
+  background-color: transparent;
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  right: 30px;
+  top: 20px;
+}
+.button {
+  border-radius: 50px;
+  padding: 15px 60px;
+}
