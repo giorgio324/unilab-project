@@ -13,8 +13,9 @@ const Dialog = ({ handleToggle, setUserData }) => {
     navigate("/form");
   };
   return (
-    <div className={styles["overlay"]}>
-      <div className={styles["dialog-container"]}>
+    <div className={styles.modal}>
+      <div className={styles.overlay} onClick={handleToggle}></div>
+      <div className={styles.content}>
         <button
           type="button"
           className={`btn ${styles.button}`}
