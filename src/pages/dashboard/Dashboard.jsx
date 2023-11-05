@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getItemFromLocalStorage } from "../../utils/localstorage";
 import SearchInput from "../../components/searchInput/SearchInput";
+import DashboardTable from "../../components/dashboardTable/DashboardTable";
 const Dashboard = () => {
   const { userData, setUserData } = useGlobalContext();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -24,13 +25,13 @@ const Dashboard = () => {
   return (
     <div className={styles["dashboard-container"]}>
       <Navbar handleToggle={handleToggle} userData={userData} />
-      <section className={styles["dashboard-content"]}>
+      <main className={styles["dashboard-content"]}>
         <div className={styles["dashboard-fields-container"]}>
           <FilterButton />
           <SearchInput />
         </div>
-        <div className={styles.table}></div>
-      </section>
+        <DashboardTable />
+      </main>
 
       {isDialogOpen &&
         createPortal(
