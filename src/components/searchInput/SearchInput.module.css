@@ -1,0 +1,15 @@
+.searchbox {
+  background-color: white;
+  padding: 12px 40px;
+  border-radius: 8px;
+  border: transparent;
+}
+.search-container {
+  position: relative;
+}
+.search-container img {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(25%);
+}

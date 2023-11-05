@@ -26,6 +26,7 @@
   font-family: var(--secondary-font);
   right: 30px;
   top: 20px;
+  cursor: pointer;
 }
 .button {
   border-radius: 50px;

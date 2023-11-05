@@ -12,6 +12,7 @@
 .dashboard-fields-container {
   display: flex;
   justify-content: space-between;
+  margin: 25px 0;
 }
 .table {
   width: 1200px;

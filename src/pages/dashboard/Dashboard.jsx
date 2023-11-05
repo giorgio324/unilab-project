@@ -7,6 +7,7 @@ import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getItemFromLocalStorage } from "../../utils/localstorage";
+import SearchInput from "../../components/searchInput/SearchInput";
 const Dashboard = () => {
   const { userData, setUserData } = useGlobalContext();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -26,7 +27,7 @@ const Dashboard = () => {
       <section className={styles["dashboard-content"]}>
         <div className={styles["dashboard-fields-container"]}>
           <FilterButton />
-          <FilterButton />
+          <SearchInput />
         </div>
         <div className={styles.table}></div>
       </section>
