@@ -6,6 +6,7 @@
   border: transparent;
   padding: 6px;
   background-color: white;
+  cursor: pointer;
 }
 .filter img {
   color: #767777;
