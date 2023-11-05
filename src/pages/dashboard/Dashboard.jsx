@@ -23,7 +23,14 @@ const Dashboard = () => {
   return (
     <div className={styles["dashboard-container"]}>
       <Navbar handleToggle={handleToggle} userData={userData} />
-      <FilterButton />
+      <section className={styles["dashboard-content"]}>
+        <div className={styles["dashboard-fields-container"]}>
+          <FilterButton />
+          <FilterButton />
+        </div>
+        <div className={styles.table}></div>
+      </section>
+
       {isDialogOpen &&
         createPortal(
           <Dialog handleToggle={handleToggle} setUserData={setUserData} />,

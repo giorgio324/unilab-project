@@ -1,6 +1,8 @@
 import styles from "./Dialog.module.css";
 import { deleteItemFromLocalStorage } from "../../utils/localstorage";
+import { useNavigate } from "react-router-dom";
 const Dialog = ({ handleToggle, setUserData }) => {
+  const navigate = useNavigate();
   const handleLogOut = () => {
     const stateReset = {
       name: "",
@@ -8,6 +10,7 @@ const Dialog = ({ handleToggle, setUserData }) => {
     };
     setUserData(stateReset);
     deleteItemFromLocalStorage();
+    navigate("/form");
   };
   return (
     <div className={styles["overlay"]}>
