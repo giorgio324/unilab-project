@@ -21,7 +21,7 @@ const FormImageInput = () => {
     <>
       <label htmlFor="image" className={styles["form-add-image"]}>
         {/* check if userdata has image propery that is not empty string if it does then use that image */}
-        {userData.image ? (
+        {userData?.image ? (
           <img
             src={userData.image}
             className={styles.image}
