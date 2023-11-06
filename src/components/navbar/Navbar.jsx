@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav>
         <div className={styles.left}>
           <h1>Form</h1>
-          <Link>API</Link>
+          <Link to={"api"}>API</Link>
         </div>
         <div className={styles.right}>
           <h2>{userData?.name}</h2>
