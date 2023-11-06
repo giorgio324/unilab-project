@@ -7,7 +7,7 @@
   align-items: center;
 }
 .dashboard-content {
-  max-width: 1200px;
+  width: 1200px;
 }
 .dashboard-fields-container {
   display: flex;

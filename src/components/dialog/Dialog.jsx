@@ -10,7 +10,7 @@ const Dialog = ({ handleToggle, setUserData }) => {
     };
     setUserData(stateReset);
     deleteItemFromLocalStorage();
-    navigate("/form");
+    navigate("/");
   };
   return (
     <div className={styles.modal}>

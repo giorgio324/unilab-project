@@ -3,45 +3,44 @@ import styles from "./DashboardTable.module.css";
 const DashboardTable = () => {
   return (
     <div className={styles.wrapper}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>სტუდენტის სახელი და გვარი</th>
-            <th>სტატუსი</th>
-            <th>სქესი</th>
-            <th>ქულები</th>
-            <th>პირადი ნომერი</th>
-            <th>მეილი</th>
-            <th>მობილურის ნომერი</th>
-            <th>მისამართი</th>
-            <th>დაბადების თარიღი</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>სტუდენტის სახელი და გვარი</th>
-            <th>სტატუსი</th>
-            <th>სქესი</th>
-            <th>ქულები</th>
-            <th>პირადი ნომერი</th>
-            <th>მეილი</th>
-            <th>მობილურის ნომერი</th>
-            <th>მისამართი</th>
-            <th>დაბადების თარიღი</th>
-          </tr>
-          <tr>
-            <th>სტუდენტის სახელი და გვარი</th>
-            <th>სტატუსი</th>
-            <th>სქესი</th>
-            <th>ქულები</th>
-            <th>პირადი ნომერი</th>
-            <th>მეილი</th>
-            <th>მობილურის ნომერი</th>
-            <th>მისამართი</th>
-            <th>დაბადების თარიღი</th>
-          </tr>
-        </tbody>
-      </table>
+      <div className={styles.table}>
+        <div className={styles.head}>
+          <div>სტუდენტის სახელი და გვარი</div>
+          <div>სტატუსი</div>
+          <div>სქესი</div>
+          <div>ქულები</div>
+          <div>პირადი ნომერი</div>
+          <div>მეილი</div>
+          <div>მობილურის ნომერი</div>
+          <div>მისამართი</div>
+          <div>დაბადების თარიღი</div>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.body}>
+          <div className={styles["body-item"]}>
+            <div>სტუდენტის სახელი და გვარი</div>
+            <div>სტატუსი</div>
+            <div>სქესი</div>
+            <div>ქულები</div>
+            <div>პირადი ნომერი</div>
+            <div>მეილი</div>
+            <div>მობილურის ნომერი</div>
+            <div>მისამართი</div>
+            <div>დაბადების თარიღი</div>
+          </div>
+          <div className={styles["body-item"]}>
+            <div>სტუდენტის სახელი და გვარი</div>
+            <div>სტატუსი</div>
+            <div>სქესი</div>
+            <div>ქულები</div>
+            <div>პირადი ნომერი</div>
+            <div>მეილი</div>
+            <div>მობილურის ნომერი</div>
+            <div>მისამართი</div>
+            <div>დაბადების თარიღი</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

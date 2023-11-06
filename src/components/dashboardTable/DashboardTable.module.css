@@ -9,35 +9,20 @@
   font-weight: 700;
   font-family: Helvetica;
 }
-
-.table thead {
-  position: relative;
+.line {
+  height: 1px;
+  background-color: black;
+  width: auto;
 }
-
-.table thead::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid #315c8e;
+.head,
+.body-item {
+  display: flex;
+  padding: 1.5rem 0;
+  text-align: center;
 }
-
-.table thead th {
-  font-weight: 700;
-  padding: 1.5rem;
-  width: 240px;
+.head div,
+.body-item div {
+  min-width: 240px;
 }
-.table tbody th {
-  font-weight: 700;
-  padding: 1.5rem;
-  width: 240px;
-}
-.table tbody tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-.wrapper {
-  overflow: auto;
-  width: 100%;
-  height: 650px;
+.body {
 }
