@@ -10,7 +10,7 @@ export const GlobalContextProvider = ({ children }) => {
     image: "",
   };
   const [userData, setUserData] = useState(initialState);
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   // when the page loads get items from localstorage otherwise set it to initialstae
   useEffect(() => {
     const localStorageValue = getItemFromLocalStorage();
@@ -21,7 +21,9 @@ export const GlobalContextProvider = ({ children }) => {
     }
   }, []);
   return (
-    <GlobalContext.Provider value={{ userData, setUserData }}>
+    <GlobalContext.Provider
+      value={{ userData, setUserData, isDialogOpen, setIsDialogOpen }}
+    >
       {children}
     </GlobalContext.Provider>
   );
