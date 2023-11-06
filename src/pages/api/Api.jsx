@@ -17,13 +17,11 @@ const Api = () => {
         const totalCount = response.headers.get("X-Total-Count");
         setTotalPages(Math.ceil(totalCount / 10));
         setPosts(data);
-        console.log(totalPages);
       } catch (error) {
         console.log("api fetch error");
       }
     };
     getData(currentPage, postsPerPage);
-    console.log(posts);
   }, [currentPage]);
   return (
     <>
@@ -38,7 +36,11 @@ const Api = () => {
           );
         })}
       </div>
-      <Pagination setCurrentPage={setCurrentPage} />
+      <Pagination
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
     </>
   );
 };
