@@ -2,17 +2,39 @@
   table-layout: fixed;
   width: 100%;
   background-color: white;
-  color: black;
+  color: #353535;
   border-radius: 8px;
-  overflow: scroll;
+  overflow-x: scroll;
   font-size: 14px;
-}
-.table thead {
-}
-.table thead tr th {
   font-weight: 700;
-  padding: 2rem;
+  font-family: Helvetica;
+}
+
+.table thead {
+  position: relative;
+}
+
+.table thead::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #315c8e;
+}
+
+.table thead th {
+  font-weight: 700;
+  padding: 1.5rem;
   width: 240px;
+}
+.table tbody th {
+  font-weight: 700;
+  padding: 1.5rem;
+  width: 240px;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: #f6f6f6;
 }
 .wrapper {
   overflow: auto;

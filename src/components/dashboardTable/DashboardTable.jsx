@@ -6,25 +6,39 @@ const DashboardTable = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Age</th>
-            <th>Age</th>
-            <th>Age</th>
-            <th>Age</th>
+            <th>სტუდენტის სახელი და გვარი</th>
+            <th>სტატუსი</th>
+            <th>სქესი</th>
+            <th>ქულები</th>
+            <th>პირადი ნომერი</th>
+            <th>მეილი</th>
+            <th>მობილურის ნომერი</th>
+            <th>მისამართი</th>
+            <th>დაბადების თარიღი</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>30</td>
+            <th>სტუდენტის სახელი და გვარი</th>
+            <th>სტატუსი</th>
+            <th>სქესი</th>
+            <th>ქულები</th>
+            <th>პირადი ნომერი</th>
+            <th>მეილი</th>
+            <th>მობილურის ნომერი</th>
+            <th>მისამართი</th>
+            <th>დაბადების თარიღი</th>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jane Smith</td>
-            <td>25</td>
+            <th>სტუდენტის სახელი და გვარი</th>
+            <th>სტატუსი</th>
+            <th>სქესი</th>
+            <th>ქულები</th>
+            <th>პირადი ნომერი</th>
+            <th>მეილი</th>
+            <th>მობილურის ნომერი</th>
+            <th>მისამართი</th>
+            <th>დაბადების თარიღი</th>
           </tr>
         </tbody>
       </table>
