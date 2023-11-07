@@ -1,26 +1,36 @@
-.table {
-  table-layout: fixed;
-  width: 100%;
-  background-color: white;
-  color: #353535;
-  border-radius: 8px;
-  overflow-x: scroll;
+.container_wrapper {
+  overflow-y: hidden;
+  overflow-x: auto;
   font-size: 14px;
-  font-weight: 700;
   font-family: Helvetica;
+  border-radius: 10px;
+  background-color: #fff;
 }
-.line {
-  height: 1px;
-  background-color: black;
-  width: auto;
+
+table {
+  color: #000;
+  border-collapse: collapse;
 }
-.head,
-.body-item {
-  display: flex;
-  padding: 1.5rem 0;
+
+thead {
+  border-bottom: 1px solid #315c8e;
+  font-weight: 700;
+  filter: blur(0.5px);
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+th,
+td {
+  padding: 24px 66px;
   text-align: center;
 }
-.head div,
-.body-item div {
-  min-width: 240px;
+
+.pagination_container {
+  margin-top: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
