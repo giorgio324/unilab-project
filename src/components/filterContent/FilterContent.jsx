@@ -1,5 +1,7 @@
 import styles from "./FilterContent.module.css";
-import dropdownArrow from "../../assets/images/dropdownArrow.svg";
+import FilterContentItem from "../filterContentItem/FilterContentItem";
+import { useState } from "react";
+
 const FilterContent = () => {
   const filterData = [
     {
@@ -17,19 +19,28 @@ const FilterContent = () => {
       ],
     },
   ];
+
+  const [isOpen, setIsOpen] = useState(Array(filterData.length).fill(false));
+
+  const toggleOpen = (index) => {
+    const newIsOpen = [...isOpen];
+    newIsOpen[index] = !newIsOpen[index];
+    setIsOpen(newIsOpen);
+  };
   return (
     <div className={styles["dropdown_container"]}>
       {filterData.map((filter, index) => {
         return (
           <div key={index}>
-            <div className={styles.dropdown}>
-              <img src={dropdownArrow} alt="dropdownArrow" />
-              <p>{filter.label}</p>
-            </div>
+            <FilterContentItem
+              filter={filter}
+              isOpen={isOpen[index]}
+              toggleOpen={() => toggleOpen(index)}
+            />
             <div>
-              {filter.checkboxes.map((checkbox, index) => {
-                return (
-                  <div key={index} className={styles.checkbox}>
+              {isOpen[index] &&
+                filter.checkboxes.map((checkbox, checkboxIndex) => (
+                  <div key={checkboxIndex} className={styles.checkbox}>
                     <input
                       type="checkbox"
                       name={checkbox.value}
@@ -37,8 +48,7 @@ const FilterContent = () => {
                     />
                     <label htmlFor={checkbox.value}>{checkbox.label}</label>
                   </div>
-                );
-              })}
+                ))}
             </div>
           </div>
         );

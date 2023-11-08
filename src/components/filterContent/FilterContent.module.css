@@ -15,11 +15,7 @@
   z-index: 2;
   color: #000;
 }
-.dropdown {
-  display: flex;
-  gap: 11px;
-  margin-top: 5px;
-}
+
 .dropdown p {
   font-family: monospace;
   font-weight: 500;
