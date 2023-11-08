@@ -1,8 +1,9 @@
 import styles from "./FilterContent.module.css";
 import FilterContentItem from "../filterContentItem/FilterContentItem";
 import { useState } from "react";
+import FilterCheckbox from "../filterCheckbox/FilterCheckbox";
 
-const FilterContent = () => {
+const FilterContent = ({ userInformation, setUserInformation }) => {
   const filterData = [
     {
       label: "სტუდენტის სტატუსი",
@@ -21,7 +22,8 @@ const FilterContent = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(Array(filterData.length).fill(false));
-
+  const [filteredUsers, setFilteredUsers] = useState(userInformation);
+  console.log(filteredUsers);
   const toggleOpen = (index) => {
     const newIsOpen = [...isOpen];
     newIsOpen[index] = !newIsOpen[index];
@@ -40,14 +42,7 @@ const FilterContent = () => {
             <div>
               {isOpen[index] &&
                 filter.checkboxes.map((checkbox, checkboxIndex) => (
-                  <div key={checkboxIndex} className={styles.checkbox}>
-                    <input
-                      type="checkbox"
-                      name={checkbox.value}
-                      id={checkbox.value}
-                    />
-                    <label htmlFor={checkbox.value}>{checkbox.label}</label>
-                  </div>
+                  <FilterCheckbox key={checkboxIndex} checkbox={checkbox} />
                 ))}
             </div>
           </div>

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { userData } from "../../data/userData";
 import styles from "./DashboardTable.module.css";
 import Pagination from "../pagination/Pagination";
 
-const DashboardTable = () => {
+const DashboardTable = ({ userInformation: userData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
