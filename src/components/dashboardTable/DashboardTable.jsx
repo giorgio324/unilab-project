@@ -6,7 +6,6 @@ import { useGlobalContext } from "../../context/GlobalContext";
 const DashboardTable = () => {
   const {
     userInformation: userData,
-    setUserInformation,
     filteredUsers,
     setFilteredUsers,
   } = useGlobalContext();
