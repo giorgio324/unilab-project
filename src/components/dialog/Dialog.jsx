@@ -9,6 +9,7 @@ const Dialog = ({ handleToggle, setUserData }) => {
       image: "",
     };
     setUserData(stateReset);
+    handleToggle();
     deleteItemFromLocalStorage();
     navigate("/");
   };

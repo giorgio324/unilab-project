@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./DashboardTable.module.css";
 import Pagination from "../pagination/Pagination";
+import { useGlobalContext } from "../../context/GlobalContext";
 
-const DashboardTable = ({ userInformation: userData }) => {
+const DashboardTable = () => {
+  const {
+    userInformation: userData,
+    setUserInformation,
+    filteredUsers,
+    setFilteredUsers,
+  } = useGlobalContext();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentData = userData.slice(startIndex, endIndex);
+  const currentData = filteredUsers.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(userData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredUsers.length / itemsPerPage);
+
+  useEffect(() => {
+    setFilteredUsers(userData);
+  }, [userData, setFilteredUsers]);
 
   return (
     <div className={styles.container}>

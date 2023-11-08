@@ -1,0 +1,10 @@
+.checkbox {
+  display: flex;
+  gap: 11px;
+  margin-left: 28px;
+  margin-top: 5px;
+}
+.checkbox label {
+  font-family: monospace;
+  font-weight: 400;
+}
