@@ -22,7 +22,7 @@ This project utilizes the following features:
 
 ## Screenshots
 
-![Screenshot 1](/src/assets/images/screenshot1.png)
-![Screenshot 2](/src/assets/images/screenshot2.png)
-![Screenshot 3](/src/assets/images/screenshot3.png)
-![Screenshot 4](/src/assets/images/screenshot4.png)
+![Screenshot 1](/src/assets/images/screenshot1.PNG)
+![Screenshot 2](/src/assets/images/screenshot2.PNG)
+![Screenshot 3](/src/assets/images/screenshot3.PNG)
+![Screenshot 4](/src/assets/images/screenshot4.PNG)
